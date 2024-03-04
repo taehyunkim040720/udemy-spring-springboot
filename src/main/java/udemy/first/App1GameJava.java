@@ -1,12 +1,11 @@
 package udemy.first;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import udemy.first.game.*;
+import udemy.first.game.GameConsole;
+import udemy.first.game.GameRunner;
+import udemy.first.game.PacManGame;
+import udemy.first.game.SuperContraGame;
 
-@SpringBootApplication
-public class FirstApplication {
-
+public class App1GameJava {
     public static void main(String[] args) {
         GameConsole superContraGame = new SuperContraGame();
         GameConsole pacmanGame = new PacManGame();
@@ -14,5 +13,4 @@ public class FirstApplication {
 
         gameRunner.run();
     }
-
 }
