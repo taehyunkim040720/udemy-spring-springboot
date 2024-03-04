@@ -17,5 +17,8 @@ public class App2GameJava {
         System.out.println(applicationContext.getBean("person2"));
         System.out.println(applicationContext.getBean("addressName"));
         System.out.println(applicationContext.getBean(Address.class));
+        System.out.println(applicationContext.getBean(Person.class));
+        System.out.println(applicationContext.getBean("person4") + "d");
+        System.out.println(applicationContext.getBean("person5"));
     }
 }
