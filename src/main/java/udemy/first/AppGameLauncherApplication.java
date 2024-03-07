@@ -8,13 +8,17 @@ import udemy.first.game.GameRunner;
 
 @Configuration
 @ComponentScan("udemy.first.game")
-public class App3GameBeans {
+public class AppGameLauncherApplication {
 
     public static void main(String[] args) {
         try (AnnotationConfigApplicationContext context =
-                     new AnnotationConfigApplicationContext(App3GameBeans.class);
+                     new AnnotationConfigApplicationContext(AppGameLauncherApplication.class);
                 ) {
-            context.getBean(GameConsole.class).up();
+            GameConsole g1 = context.getBean(GameConsole.class);
+            context.getBean(GameRunner.class).run();
+            GameConsole g2 = context.getBean(GameConsole.class);
+            context.getBean(GameRunner.class).run();
+            GameConsole g3 = context.getBean(GameConsole.class);
             context.getBean(GameRunner.class).run();
         }
     }
