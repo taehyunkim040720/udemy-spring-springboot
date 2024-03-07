@@ -1,11 +1,11 @@
 package udemy.first.game;
-
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration
+@Component
 public class GameRunner {
-    GameConsole game;
+
+    private GameConsole game;
 
     public GameRunner(GameConsole game) {
          this.game = game;

@@ -1,5 +1,8 @@
 package udemy.first.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PacManGame implements GameConsole {
     @Override
     public void up() {
