@@ -1,12 +1,17 @@
 package udemy.first.game;
 
-public class GameRunner {
-     GameConsole game;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-     public GameRunner(GameConsole game) {
+@Configuration
+public class GameRunner {
+    GameConsole game;
+
+    public GameRunner(GameConsole game) {
          this.game = game;
      }
 
+     @Bean
      public void run() {
          game.up();
          game.down();
