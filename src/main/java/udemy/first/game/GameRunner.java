@@ -1,18 +1,20 @@
 package udemy.first.game;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration
+@Component
 public class GameRunner {
-    GameConsole game;
+
+    private GameConsole game;
 
     public GameRunner(GameConsole game) {
-         this.game = game;
-     }
+        this.game = game;
+    }
 
-     @Bean
      public void run() {
+        System.out.println(game);
          game.up();
          game.down();
          game.left();
